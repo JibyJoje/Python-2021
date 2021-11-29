@@ -125,11 +125,32 @@ while <expression>:
 
 - **Break Statements** -  The **Break Statements** are used when you want to exit/break a block of code and resumes execution at the next statement    
 
+```
+for <expression>:
+    if <condition>:
+        break
+    print("Exiting the If Condition")
+print("Exiting the For Loop")
+```
+
 - **Continue Statement** - The **Continue Statements** are used when you want to return the control to the beginning of the while loop. The continue statement rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop. The continue statement can be used in both while and for loops.
+
+```
+for <expression>:
+    if <condition>:
+        continue
+    print("Exitig the If Condition")
+print("Exiting the For Loop")
+```
 
 ### For Loops:
 
 - **For Loops** - The **For** loops can be used when you know how many number of times you want to run the loop. The **While** loop can be used to achieve the same results, but the **For** loop is the most defined way to code when you know how many times you want to run the loop.
+```
+
+for val in sequence:
+    loop body
+```
 
 ## Boolean Expressions and Operators:
 
@@ -161,3 +182,65 @@ while <expression>:
 |not True | False  |
 |not False | True |
 
+## Lists in Python:
+
+- `List` are used to store multiple items in a Single Variable
+- `List` are created using square brackets `[]`
+- They are ordered, mutable and allow duplicate values.
+- The items in a `List` are indexed, the first item has the index `[0]`
+- The last item in the `List` has the index `[-1]`
+- If you add a new item to the list, the item will be added at the end of the list.
+- To determine the number of items in a list, use the `len()` function
+```
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+```
+- The `del` keyword can be used to delete the item at a given index
+```
+del item[2]
+```
+- You can use the built-in list methods to manipulate the existing list
+- Some of the built-in list methods are `list.append()` and `list.insert()`
+- `list.append()` can be used to add a new item to the end of the list.
+- `list.insert()` can be used to add a new item at the mentioned index.
+```
+list.insert(2,"new_value") #insert new_value at index 2
+```
+- You can swap the values in the given list using the following snippet easily, without having to use a temp/third variable.
+```
+items[0], items[1] = items[1], items[0]
+```
+- `list.sort()` can be used to sort the list in the ascending or the descending order. Default is `ascending`
+- `list.reverse()` can be used to reverse the items in a given list.
+- `list.pop(i)` can be used to remove the item from a given index
+- The items in a list can be sliced.
+```
+print (items[1:]) # Will print all items from index[1] till end of the list
+
+print (items[:3]) # Will print all items from index 0 to index[2] "(3-1)"
+
+```
+
+## Functions in Python:
+
+### Built-in Functions:
+
+- Python has a large number of Built-in functions that can support the users to achieve the most commonly used or the perform the common tasks. The functionalities of these Built-in functions are pre-defined and can be used to perform several functions. Some of the commonly used Built-in functions are **print(), int(), len(), abs(), append() etc.**
+
+- The **import** statement can be used to import new modules and get access to new functions
+* `import <module_name>` -  But you have to use the function in the following way `module_name.function_name()`
+
+* `from <module_name> import function_name` - Then you can invoke the function without having to mention the module name just by `function_name()`
+
+### User Defined Functions:
+
+- Users can write their own functions in Python using the `def function_name()` statement and execute the function by just calling the `function_name()` where you want to execute it. 
+```
+def input_number():
+    return int(input("Enter a number:"))
+```
+- Users should consider defining functions where ever necessary where they are finding themselves using the same block of code again and again in order to prevent duplicating. 
+
+- Functions also provide better readability, better run-time, and in-case you want to change what the code does, you just have to change it in the function rather than multiple lines of code.
+
+- You can also pass parameters to your functions and such functions are called as **Parameterized Functions** and can accept arguments depending on the number of parameters the function accepts.
